@@ -48,10 +48,6 @@ class RestaurantServiceTest {
 
         }
 
-
-
-
-
     @Test
     public void add_restaurant_should_increase_list_of_restaurants_size_by_1(){
         restaurant_adding_for_testing();
@@ -60,4 +56,7 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
 }
