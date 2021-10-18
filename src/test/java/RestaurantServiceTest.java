@@ -36,8 +36,19 @@ class RestaurantServiceTest {
         restaurant_adding_for_testing();
         int initialNumberOfRestaurants = service.getRestaurants().size();
         service.removeRestaurant("Amelie's cafe");
-        assertEquals(initialNumberOfRestaurants-1, service.getRestaurants().size());
+        assertEquals(initialNumberOfRestaurants - 1, service.getRestaurants().size());
+
     }
+        @Test
+        public void searching_for_non_existing_restaurant_should_throw_exception() throws restaurantNotFoundException {
+            restaurant_adding_for_testing();
+            assertThrows(restaurantNotFoundException.class,()->{
+                service.findRestaurantByName("Amelia");
+            });
+
+        }
+
+
 
 
 

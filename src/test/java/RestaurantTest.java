@@ -23,12 +23,6 @@ class RestaurantTest {
         restaurant.addToMenu("Vegetable lasagne", 269);
     }
     //>>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    @Test
-    public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time(){
-        restaurantCreation();
-        restaurant.setClosingTime(LocalTime.now().plusMinutes(10));
-        assertTrue(restaurant.isRestaurantOpen());
-    }
 
     @Test
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time(){
